@@ -5,30 +5,24 @@ WhyIDidntReport, April 2020
 Overview
 --------
 
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.hhh
+A little over a year ago, I [analyzed tweets](https://github.com/deepssquared/whyididntreport) using the hashtag **\#WhyIDidntReport**. This hashtag first trended in Fall 2018, during the nomination of Supreme Court Justice Brett Kavanuagh. It gained momentum from prominent public figures. This hashtag recently re-surfaced in response to allegations against the presumptive Democratic presidential nominee, Joe Biden. I'll be updating this file as more tweets roll in and to map out more sophisticated analyses.
 
-Including Code
---------------
+Text Mining
+-----------
 
-You can include R code in the document as follows:
+I collected a total of **8533 tweets**, filtering for accounts with few followers and excluding retweets. The tweets were dated between **4/2/2020** and **4/9/2020**. Based on the words and excluding common words (e.g. "a", "the", "I", "me"), the following words had the highest frequency:
 
-``` r
-summary(cars)
-```
+![](README_files/figure-markdown_github/plot-1.png)
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+Here's the same visualization in two word clouds:
 
-Including Plots
----------------
+![](README_files/figure-markdown_github/wc1-1.png)
 
-You can also embed plots, for example:
+![](README_files/figure-markdown_github/wordcloud2-1.png)
 
-![](README_files/figure-markdown_github/pressure-1.png)
+Sentiment Analysis
+------------------
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Using some pre-made tables, courtesy of the tidytext package, we can also map some of the immediate emotions coded by the top frequent words:
+
+![](README_files/figure-markdown_github/sentiment%20plot-1.png)
